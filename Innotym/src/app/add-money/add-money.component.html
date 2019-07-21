@@ -1,0 +1,24 @@
+
+
+<div class="container">
+  <div class="col-md-4 offset-md-4">
+      <div class="card card-body"> 
+          <form>
+            <div class="form-group">
+            <label>Amount</label> 
+            <input type="number" name="amount"  [(ngModel)]="amount">
+            </div>
+            <button  class="btn btn-primary btn-block" (click)="addMoney()" >Add Money</button>
+    
+          </form>
+          <div class="alert alert-success mt-30" [hidden]="showSuccess">
+              <h6>AMount Added</h6>
+              </div>
+            <div class="alert alert-danger mt-30" [hidden]="showError">
+                <h6>Failed to load</h6>
+            </div>
+            </div>
+            </div>
+       </div>
+   
+

@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="col-md-4 offset-md-4">
+        <div class="card card-body mt-30">
+     <form>
+         <div class="form-group">
+             <label>Select User</label>
+             <select  class="form-control" name="selectUser" [(ngModel)]="transactionData.refUser">
+                 <option [ngValue]="item" *ngFor="let item of userList">{{item.name}}</option>
+                 </select>
+                 </div>
+                 <div class="form-group">
+                     <label>Amount</label>
+                     <input type="text" name="amount" class="form-control" [(ngModel)]="transactionData.amount">
+                     </div>
+                     <button type="button" class="btn btn-primary" (click)="transferAmount()">Submit</button>
+                     </form>
+
+                 
+         </div>
+      
+    </div>
+    </div>
+
+

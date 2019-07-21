@@ -1,0 +1,17 @@
+<h2>User List</h2>
+ <table class="table table-hover table-striped table-bordered">
+     <thead class="bg-dark">
+         <th>UserId</th>
+         <th>Name</th>
+         <th>Email</th>
+         <th>Amount</th>
+     </thead>
+     <tbody>
+         <tr *ngFor="let user of userList">
+             <td>{{user.userId}}</td>
+             <td>{{user.name}}</td>
+             <td>{{user.email}}</td>
+             <td>{{user.amount}}</td>
+         </tr>
+     </tbody>
+ </table>
