@@ -7,7 +7,7 @@ import { EditprofileComponent } from './editprofile/editprofile.component';
 import { LoginComponent } from './login/login.component';
 import {HomeComponent} from './home/home.component'
 const routes: Routes = [
-  {path: '',redirectTo:'/addMoney',pathMatch:'full'},
+  {path: '',redirectTo:'/login',pathMatch:'full'},
 {path:'addMoney',component:AddMoneyComponent},
 {path:'doTransaction',component:DoTransactionComponent},
 {path:'myTransaction',component:MyTransactionComponent},

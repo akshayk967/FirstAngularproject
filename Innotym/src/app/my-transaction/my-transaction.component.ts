@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedserviceService } from '../sharedservice.service';
+import { TransactionService } from '../transaction.service';
+
 
 @Component({
   selector: 'app-my-transaction',
@@ -6,10 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-transaction.component.css']
 })
 export class MyTransactionComponent implements OnInit {
-
-  constructor() { }
+loggedInUser:any={};
+TransactionList:any=[];
+  constructor(private _sharedService:SharedserviceService,private _transaction:TransactionService) { }
+  
 
   ngOnInit() {
-  }
+    this._sharedService.currentData.subscribe(data=>{
+      this.loggedInUser=data})
 
-}
+       this._transaction.getUserTransactionList(this.loggedInUser.userId).subscribe(data =>{
+       this.TransactionList=data 
+      },
+       error=>{
+         alert("Not able to fetch Content")
+       
+      
+
+
+  })
+
+}}
