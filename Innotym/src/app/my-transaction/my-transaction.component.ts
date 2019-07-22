@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedserviceService } from '../sharedservice.service';
 import { TransactionService } from '../transaction.service';
+import { UserService } from '../user.service';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { TransactionService } from '../transaction.service';
 export class MyTransactionComponent implements OnInit {
 loggedInUser:any={};
 TransactionList:any=[];
-  constructor(private _sharedService:SharedserviceService,private _transaction:TransactionService) { }
+  constructor(private _userService:UserService,private _sharedService:SharedserviceService,private _transaction:TransactionService) { }
   
 
   ngOnInit() {
